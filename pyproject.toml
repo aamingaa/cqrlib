@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cqrlib"
+version = "0.1.0"
+description = "Cauldrons Quantitative Research Library"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+  "numba>=0.49.1",
+  "numpy>=1.17.3",
+  "matplotlib>=3.1.1",
+  "pandas>=1.0.3",
+  "scikit-learn>=0.23.1",
+  "scipy==1.3.1",
+  "statsmodels>=0.11.1",
+]
+
+[tool.setuptools]
+include-package-data = true
+packages = [
+  "cqrlib",
+  "cqrlib.Util",
+  "cqrlib.Tools",
+  "cqrlib.Sampling",
+  "cqrlib.Sample_data",
+  "cqrlib.Risk_mgmt",
+  "cqrlib.Portfolio_opt",
+  "cqrlib.Labels",
+  "cqrlib.Filters",
+  "cqrlib.Features",
+  "cqrlib.Ensemble",
+  "cqrlib.Back_test",
+]
+
+[tool.setuptools.package-dir]
+"cqrlib" = "."
