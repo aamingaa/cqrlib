@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 import random
-from research.Util.multiprocess import process_jobs_, process_jobs
+from ..Util.multiprocess import process_jobs_, process_jobs
 
 from scipy.stats import norm
 from scipy.special import comb

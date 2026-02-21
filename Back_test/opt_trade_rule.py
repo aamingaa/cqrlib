@@ -4,7 +4,7 @@ import pandas as pd
 from random import gauss
 from itertools import product
 
-from research.Util.multiprocess import mp_pandas_obj
+from ..Util.multiprocess import mp_pandas_obj
 
 def _opt_tr(molecule,
             n_run: float = 100,

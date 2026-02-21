@@ -3,7 +3,7 @@ import pandas as pd
 
 from scipy.stats import norm
 
-from research.Util.multiprocess import mp_pandas_obj
+from ..Util.multiprocess import mp_pandas_obj
 
 p = print
 sep = ("=" * 55)

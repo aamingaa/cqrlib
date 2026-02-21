@@ -3,8 +3,8 @@ import numpy as np
 import pandas as pd
 import cvxpy as cp
 import matplotlib.pyplot as plt
-from research.Portfolio_opt.rtn_est import ReturnsEstimators
-from research.Portfolio_opt.risk_est import RiskEstimators
+from .rtn_est import ReturnsEstimators
+from .risk_est import RiskEstimators
 
 
 class MV:

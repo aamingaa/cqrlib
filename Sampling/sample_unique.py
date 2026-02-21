@@ -17,7 +17,7 @@ import pandas as pd
 import numpy as np
 import warnings
 
-from research.Util.multiprocess import mp_pandas_obj, process_jobs_, process_jobs
+from ..Util.multiprocess import mp_pandas_obj, process_jobs_, process_jobs
 
 p = print
 

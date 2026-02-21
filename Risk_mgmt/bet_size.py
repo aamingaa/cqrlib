@@ -3,8 +3,8 @@ import pandas as pd
 import numpy as np
 from scipy.stats import norm
 
-from research.Risk_mgmt.ef3m import mts_fit, m_bet_EF3M
-from research.Util.multiprocess import mp_pandas_obj
+from .ef3m import mts_fit, m_bet_EF3M
+from ..Util.multiprocess import mp_pandas_obj
 
 def _avg_active_signals(signals, molecule):
     """

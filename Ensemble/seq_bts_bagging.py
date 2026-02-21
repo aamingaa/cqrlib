@@ -30,14 +30,33 @@ from sklearn.metrics import r2_score, accuracy_score
 from sklearn.tree import DecisionTreeClassifier, DecisionTreeRegressor
 
 from sklearn.utils import check_random_state, check_array, column_or_1d
-from sklearn.utils import indices_to_mask
-from sklearn.utils.metaestimators import if_delegate_has_method
+try:
+    from sklearn.utils import indices_to_mask
+except ImportError:
+    def indices_to_mask(indices, mask_length):
+        """Compatibility shim for sklearn versions without indices_to_mask."""
+        mask = np.zeros(mask_length, dtype=bool)
+        mask[np.asarray(indices)] = True
+        return mask
+try:
+    from sklearn.utils.metaestimators import if_delegate_has_method
+except ImportError:
+    from sklearn.utils.metaestimators import available_if
+
+    def if_delegate_has_method(delegate):
+        def _decorator(func):
+            def _check(self):
+                return hasattr(getattr(self, delegate, None), func.__name__)
+
+            return available_if(_check)(func)
+
+        return _decorator
 from sklearn.utils.multiclass import check_classification_targets
 from sklearn.utils.random import sample_without_replacement
 from sklearn.utils.validation import has_fit_parameter, check_is_fitted, \
     _check_sample_weight, _deprecate_positional_args
 
-from research.Sampling.sample_unique import mp_seq_bts, mp_idx_matrix, av_unique
+from ..Sampling.sample_unique import mp_seq_bts, mp_idx_matrix, av_unique
 
 __all__ = ["BaggingClassifier",
            "BaggingRegressor"]

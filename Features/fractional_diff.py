@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-from research.Util.multiprocess import process_jobs_, process_jobs
+from ..Util.multiprocess import process_jobs_, process_jobs
 
 from numba import njit
 from statsmodels.tsa.stattools import adfuller

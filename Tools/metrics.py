@@ -9,8 +9,8 @@ from sklearn.model_selection import BaseCrossValidator
 from sklearn.ensemble import BaggingClassifier
 from sklearn.tree import DecisionTreeClassifier
 
-from research.Tools.cross_validate import cv_score, PurgedKFold
-from research.Util.multiprocess import mp_pandas_obj
+from .cross_validate import cv_score, PurgedKFold
+from ..Util.multiprocess import mp_pandas_obj
 
 def sample_weight_generator(X: pd.DataFrame, axis: int = 0):
     sample_weight_ = np.ones(X.shape[axis])
