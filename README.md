@@ -1,5 +1,10 @@
 # Cauldrons Quantitative Research Library (cqrlib)
 
+
+python-mpipinstall-e.--no-build-isolation
+
+
+
 Research tools for educational quantitative research "Project Cauldrons".
 
 Created for easier research, this repositary is built mainly using multiprocessing for parallel computering & pandas.
@@ -31,11 +36,15 @@ Due to lack of resource, cqrlib can only provide most but not all algorithms fou
 
 ## Mean-Reversion/ Futures Related
 
-Most of the logic can be found in Advance in Financial Machine Learning. 
+Most of the logic can be found in Advance in Financial Machine Learning.
 
 ![logo](https://media.wiley.com/product_data/coverImage300/89/11194820/1119482089.jpg)
 
 The textbook itself is meant for graduate studies writtern by Dr Macros Lopez De Prado.
+
+python-mpipinstall-e.--no-build-isolation
+
+
 
 I highly recommend you to purchase this book to bridge the knowledge gap.
 
@@ -66,7 +75,7 @@ Disclaimer: The code base is still messy since it is still under development sta
 * Fractional Differentiate
 * Sequential bootstrapping
 
-For option related codes, I haven't develop as much lately. (Not extremely useful) 
+For option related codes, I haven't develop as much lately. (Not extremely useful)
 
 I am looking forward to build option related strategies based on "Volatility Trading" written by a fellow Mensian, Dr Euan Sinclair.
 
